@@ -280,6 +280,9 @@
 //#define FAN6_PIN                          PC9   // Fan6
 //#define FAN7_PIN                          PE14  // Fan7
 
+//Filamen Runout Sensor Pin
+#define FIL_RUNOUT_PIN PD3 // Z Max endstop
+
 #ifndef SDCARD_CONNECTION
   #define SDCARD_CONNECTION ONBOARD
 #endif
