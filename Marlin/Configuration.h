@@ -70,7 +70,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(Dan Backe, Kuben)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Danne, Kuben)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -1148,7 +1148,7 @@
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 //Change 2020-11-25
-#define X_MIN_POS -50
+#define X_MIN_POS -40
 #define Y_MIN_POS -30
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
