@@ -474,8 +474,8 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-//Change 2020-11-25
-#define E0_AUTO_FAN_PIN PC8
+//Change 2020-11-30
+#define E0_AUTO_FAN_PIN FAN1_PIN
 #define E1_AUTO_FAN_PIN -1
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1
@@ -749,7 +749,7 @@
   // Define probe X and Y positions for Z1, Z2 [, Z3 [, Z4]]
   // If not defined, probe limits will be used.
   // Override with 'M422 S<index> X<pos> Y<pos>'
-  #define Z_STEPPER_ALIGN_XY { { 300, 58.8 }, { 300, 251.4 }, { 10, 152.9 } }
+  #define Z_STEPPER_ALIGN_XY { { 270, 58.8 }, { 270, 251.4 }, { 40, 152.9 } }
 
   /**
    * Orientation for the automatically-calculated probe positions.
