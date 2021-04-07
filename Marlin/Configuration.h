@@ -1159,8 +1159,8 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-//Change 2020-11-25
-#define Z_MAX_POS 300
+//Change 2021-04-06
+#define Z_MAX_POS 365
 
 /**
  * Software Endstops
