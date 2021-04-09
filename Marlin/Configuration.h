@@ -103,8 +103,8 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-//Change 2020-11-25
-#define SERIAL_PORT 1
+//Change 2021-04-09
+#define SERIAL_PORT -1
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
@@ -631,11 +631,12 @@
 // Specify here all the endstop connectors that are connected to any endstop or probe.
 // Almost all printers will be using one per axis. Probes will use one or more of the
 // extra connectors. Leave undefined any used for non-endstop and non-probe purposes.
+//Change 2021-04-10
 #define USE_XMIN_PLUG
-#define USE_YMIN_PLUG
+//#define USE_YMIN_PLUG
 #define USE_ZMIN_PLUG
 //#define USE_XMAX_PLUG
-//#define USE_YMAX_PLUG
+#define USE_YMAX_PLUG
 //#define USE_ZMAX_PLUG
 
 // Enable pullup for all endstops to prevent a floating state
@@ -859,11 +860,11 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-//Change 2021-01-18
-#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+//Change 2021-04-09
+//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
-//Change 2021-01-14 
+//Change 2021-04-09
 #define USE_PROBE_FOR_Z_HOMING
 
 /**
@@ -1113,7 +1114,8 @@
 //Change 2020-11-25 
 #define INVERT_X_DIR true
 #define INVERT_Y_DIR true
-#define INVERT_Z_DIR false
+//Change 2021-04-09
+#define INVERT_Z_DIR true
 
 // @section extruder
 
@@ -1142,7 +1144,8 @@
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
 #define X_HOME_DIR -1
-#define Y_HOME_DIR -1
+//Change 2021-04-10
+#define Y_HOME_DIR 1
 #define Z_HOME_DIR -1
 
 // @section machine
