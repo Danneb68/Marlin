@@ -103,15 +103,15 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-//Change 2021-04-09
-#define SERIAL_PORT -1
+//Change 2022-04-18
+#define SERIAL_PORT 6 //Wifi - Connet tp Raspberry PI
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
 //Change 2020-11-25
-#define SERIAL_PORT_2 3
+#define SERIAL_PORT_2 3 //TFT
 
 /**
  * This setting determines the communication speed of the printer.
