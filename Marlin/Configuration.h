@@ -103,8 +103,8 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-//Change 2022-04-18
-#define SERIAL_PORT 6 //Wifi - Connet tp Raspberry PI
+//Change 2022-04-24
+#define SERIAL_PORT -1 //USB
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
@@ -509,9 +509,10 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  22.20
-    #define DEFAULT_Ki   1.08
-    #define DEFAULT_Kd 114.00
+    //Change 2021-04-25
+    #define DEFAULT_Kp 20.5863
+    #define DEFAULT_Ki 1.7387
+    #define DEFAULT_Kd 60.9354
   #endif
 #endif // PIDTEMP
 
@@ -551,9 +552,10 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 10.00
-  #define DEFAULT_bedKi .023
-  #define DEFAULT_bedKd 305.4
+  //Change
+  #define DEFAULT_bedKp 32.5933
+  #define DEFAULT_bedKi 5.5810
+  #define DEFAULT_bedKd 126.8964
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -1014,7 +1016,8 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 10
+//Change 2021-04-26
+#define PROBING_MARGIN 20
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_SPEED (133*60)
@@ -1115,7 +1118,7 @@
 //Change 2020-11-25 
 #define INVERT_X_DIR true
 #define INVERT_Y_DIR true
-//Change 2021-04-09
+//Change 2021-04-25
 #define INVERT_Z_DIR true
 
 // @section extruder
@@ -1159,13 +1162,13 @@
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 //Change 2020-11-25
-#define X_MIN_POS 0
+#define X_MIN_POS -20
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
 //Change 2021-04-06
-#define Z_MAX_POS 365
+#define Z_MAX_POS 280
 
 /**
  * Software Endstops
