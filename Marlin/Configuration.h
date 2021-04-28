@@ -544,8 +544,8 @@
  * When set to any value below 255, enables a form of PWM to the bed that acts like a divider
  * so don't use it unless you are OK with PWM on your bed. (See the comment on enabling PIDTEMPBED)
  */
-//Change 2021-04-28
-#define MAX_BED_POWER 128 // limits duty cycle to bed; 255=full current
+
+#define MAX_BED_POWER 255 // limits duty cycle to bed; 255=full current
 
 #if ENABLED(PIDTEMPBED)
   //#define MIN_BED_POWER 0
@@ -1013,7 +1013,7 @@
  *     O-- FRONT --+
  */
 //Change 2020-11-25
-#define NOZZLE_TO_PROBE_OFFSET { 36.47, 4, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 36.47, -4, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
