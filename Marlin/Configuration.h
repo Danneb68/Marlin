@@ -817,7 +817,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
  //Change 2020-11-25
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 800, 415 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 800, 410.8900 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1127,8 +1127,8 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-//Change 2020-11-25
-#define MULTIPLE_PROBING 2
+//Change 2021-05-1
+//#define MULTIPLE_PROBING 2
 //#define EXTRA_PROBING    1
 
 /**
@@ -1461,7 +1461,8 @@
   // The height can be set with M420 Z<height>
   #define ENABLE_LEVELING_FADE_HEIGHT
   #if ENABLED(ENABLE_LEVELING_FADE_HEIGHT)
-    #define DEFAULT_LEVELING_FADE_HEIGHT 10.0 // (mm) Default fade height.
+    //Change 2021-05-21
+    #define DEFAULT_LEVELING_FADE_HEIGHT 20.0 // (mm) Default fade height.
   #endif
 
   // For Cartesian machines, instead of dividing moves on mesh boundaries,
@@ -1490,8 +1491,8 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  //Change 2020-11-25
-  #define GRID_MAX_POINTS_X 5
+  //Change 2021-05-02
+  #define GRID_MAX_POINTS_X 11
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
