@@ -1217,10 +1217,13 @@
   // After a runout is detected, continue printing this length of filament
   // before executing the runout script. Useful for a sensor at the end of
   // a feed tube. Requires 4 bytes SRAM per sensor, plus 4 bytes overhead.
+  
   //Change 2020-11-18
   //#define FILAMENT_RUNOUT_DISTANCE_MM 25
   #define FILAMENT_RUNOUT_DISTANCE_MM 50
-
+  //Change 2021-05-13
+  //#define FILAMENT_RUNOUT_DISTANCE_MM 10 //Diameter där axel driver filamentet delat med antal öppningar i hjulet + 5mm för marginal
+  
   #ifdef FILAMENT_RUNOUT_DISTANCE_MM
     // Enable this option to use an encoder disc that toggles the runout pin
     // as the filament moves. (Be sure to set FILAMENT_RUNOUT_DISTANCE_MM
