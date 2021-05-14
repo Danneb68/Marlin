@@ -542,8 +542,8 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-//Change 2020-11-30
-#define E0_AUTO_FAN_PIN FAN2_PIN 
+//Change 2021-08-15
+#define E0_AUTO_FAN_PIN FAN1_PIN 
 #define E1_AUTO_FAN_PIN -1
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1
