@@ -1220,15 +1220,15 @@
   
   //Change 2020-11-18
   //#define FILAMENT_RUNOUT_DISTANCE_MM 25
-  #define FILAMENT_RUNOUT_DISTANCE_MM 50
-  //Change 2021-05-13
-  //#define FILAMENT_RUNOUT_DISTANCE_MM 10 //Diameter där axel driver filamentet delat med antal öppningar i hjulet + 5mm för marginal
+  //#define FILAMENT_RUNOUT_DISTANCE_MM 50
+  //Change 2021-05-18
+  #define FILAMENT_RUNOUT_DISTANCE_MM 10 //Diameter där axel driver filamentet delat med antal öppningar i hjulet + 5mm för marginal
   
   #ifdef FILAMENT_RUNOUT_DISTANCE_MM
     // Enable this option to use an encoder disc that toggles the runout pin
     // as the filament moves. (Be sure to set FILAMENT_RUNOUT_DISTANCE_MM
     // large enough to avoid false positives.)
-    //#define FILAMENT_MOTION_SENSOR
+    #define FILAMENT_MOTION_SENSOR
   #endif
 #endif
 
