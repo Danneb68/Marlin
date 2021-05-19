@@ -1207,7 +1207,7 @@
   #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
   //Change 2021-05-18
-  #define FIL_RUNOUT_STATE     HIGH        // Pin state indicating that filament is NOT present.
+  #define FIL_RUNOUT_STATE     LOW        // Pin state indicating that filament is NOT present.
   #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
   //#define FIL_RUNOUT_PULLDOWN           // Use internal pulldown for filament runout pins.
 
@@ -1218,10 +1218,7 @@
   // After a runout is detected, continue printing this length of filament
   // before executing the runout script. Useful for a sensor at the end of
   // a feed tube. Requires 4 bytes SRAM per sensor, plus 4 bytes overhead.
-  
-  //Change 2020-11-18
-  //#define FILAMENT_RUNOUT_DISTANCE_MM 25
-  //#define FILAMENT_RUNOUT_DISTANCE_MM 50
+
   //Change 2021-05-18
   #define FILAMENT_RUNOUT_DISTANCE_MM 10 //Diameter där axel driver filamentet delat med antal öppningar i hjulet + 5mm för marginal
   
@@ -1229,6 +1226,7 @@
     // Enable this option to use an encoder disc that toggles the runout pin
     // as the filament moves. (Be sure to set FILAMENT_RUNOUT_DISTANCE_MM
     // large enough to avoid false positives.)
+    //Change 2021-05-18
     #define FILAMENT_MOTION_SENSOR
   #endif
 #endif
