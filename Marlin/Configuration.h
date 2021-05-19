@@ -1220,7 +1220,7 @@
   // a feed tube. Requires 4 bytes SRAM per sensor, plus 4 bytes overhead.
 
   //Change 2021-05-18
-  #define FILAMENT_RUNOUT_DISTANCE_MM 10 //Diameter där axel driver filamentet delat med antal öppningar i hjulet + 5mm för marginal
+  #define FILAMENT_RUNOUT_DISTANCE_MM 7 //Diameter där axel driver filamentet delat med antal öppningar i hjulet
   
   #ifdef FILAMENT_RUNOUT_DISTANCE_MM
     // Enable this option to use an encoder disc that toggles the runout pin
